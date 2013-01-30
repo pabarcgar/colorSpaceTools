@@ -5,31 +5,53 @@ Created on Jan 25, 2013
 '''
 def createColorSpaceDictionary():
     dict = {}
-    dict['AT'] = '0'
-    dict['CG'] = '0'
-    dict['GC'] = '0'
-    dict['TA'] = '0'
+    dict['AT'] = '3'
+    dict['CG'] = '3'
+    dict['GC'] = '3'
+    dict['TA'] = '3'
     dict['AC'] = '1'
     dict['CA'] = '1'
     dict['GT'] = '1'
     dict['TG'] = '1'   
-    dict['AA'] = '2'
-    dict['CC'] = '2'
-    dict['GG'] = '2'
-    dict['TT'] = '2'
-    dict['GA'] = '3'
-    dict['TC'] = '3'
-    dict['AG'] = '3'
-    dict['CT'] = '3'
+    dict['AA'] = '0'
+    dict['CC'] = '0'
+    dict['GG'] = '0'
+    dict['TT'] = '0'
+    dict['GA'] = '2'
+    dict['TC'] = '2'
+    dict['AG'] = '2'
+    dict['CT'] = '2'
     return dict
 
-def convierteReadAColorSpace(inputRead):
+#def createColorSpaceToBaseSpaceDictionary():
+#	dict = {}
+#	dict['T0'] = 'A'
+#	dict['T1'] = 'G'
+#	dict['T2'] = 'T'
+#	dict['T3'] = 'C'
+	#dict[''] = ''
+
+
+
+def convierteReadAColorSpace(inputRead, adapter):
     traduccion = createColorSpaceDictionary()
-    outputRead = 'T'
-    caracterAnterior = 'T'
+    outputRead = adapter
+    caracterAnterior = adapter
     for caracter in inputRead:
         nuevoCaracter = caracter
         color = traduccion[caracterAnterior + nuevoCaracter]
         outputRead = outputRead + color
         caracterAnterior = nuevoCaracter
     return outputRead
+
+#def convierteColorSpaceReadABaseSpace(inputRead):
+#    traduccion = createColorSpaceDictionary()
+#    outputRead = adapter
+#    caracterAnterior = adapter
+#    for caracter in inputRead:
+#        nuevoCaracter = caracter
+#        color = traduccion[caracterAnterior + nuevoCaracter]
+#        outputRead = outputRead + color
+#        caracterAnterior = nuevoCaracter
+#    return outputRead
+
