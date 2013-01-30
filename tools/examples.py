@@ -15,26 +15,26 @@ def pruebaTransformaReads():
 	
     
     print 'Read Normal:'
-    print readNormal + ' - ' + readTools.convierteReadAColorSpace(readNormal, 'T')
+    print readNormal + ' - ' + readTools.baseSpaceReadToColorSpace(readNormal, 'T')
     print ''
     print 'Read adaptador \'A\':'
-    print readNormal + ' - ' + readTools.convierteReadAColorSpace(readNormal, 'A')
+    print readNormal + ' - ' + readTools.baseSpaceReadToColorSpace(readNormal, 'A')
     print ''
     print 'Read Insercion:'
-    print readInsercion + ' - ' + readTools.convierteReadAColorSpace(readInsercion, 'T')
+    print readInsercion + ' - ' + readTools.baseSpaceReadToColorSpace(readInsercion, 'T')
     print ''
     print 'Read Deleccion:'
-    print readDeleccion + ' - ' + readTools.convierteReadAColorSpace(readDeleccion, 'T')
+    print readDeleccion + ' - ' + readTools.baseSpaceReadToColorSpace(readDeleccion, 'T')
     print ''
     print 'Read Sustitucion:'
-    print readSustitucion + ' - ' + readTools.convierteReadAColorSpace(readSustitucion, 'T')
+    print readSustitucion + ' - ' + readTools.baseSpaceReadToColorSpace(readSustitucion, 'T')
     print ''
     print 'Read Doble Deleccion:'
-    print readDobleDeleccion + ' - ' + readTools.convierteReadAColorSpace(readDobleDeleccion, 'T')
+    print readDobleDeleccion + ' - ' + readTools.baseSpaceReadToColorSpace(readDobleDeleccion, 'T')
 
     print ''
     print 'Ejemplo real Para variar:' 
-    print ejemploReal + ' - ' + readTools.convierteReadAColorSpace(ejemploReal, 'T')
+    print ejemploReal + ' - ' + readTools.baseSpaceReadToColorSpace(ejemploReal, 'T')
     print 'Deberia ser:                             T12203133300333022012010321200311210030'
 
 pruebaTransformaReads()
